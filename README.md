@@ -2,7 +2,7 @@
 
 **A Hardware-Software Performance Comparison**
 
-> **Jay Im** · Department of Electrical and Computer Engineering · Santa Clara University  
+> **Jay Im** · Department of Computer Science and Engineering · Santa Clara University  
 > ECEN 529: Hardware Acceleration for Machine Learning on FPGAs · June 2026
 
 ---
