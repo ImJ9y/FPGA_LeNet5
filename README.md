@@ -87,21 +87,21 @@ FC3: 84  → 43 logits  →  argmax  →  predicted class
 
 ```
 ┌─────────────────────────────────────────────────────┐
-│                  Zynq XC7Z020                        │
-│                                                      │
+│                  Zynq XC7Z020                       │
+│                                                     │
 │  ┌──────────────────┐      ┌─────────────────────┐  │
 │  │  Processing      │      │  Programmable Logic │  │
 │  │  System (PS)     │      │  (PL / FPGA fabric) │  │
 │  │                  │      │                     │  │
-│  │  ARM Cortex-A9   │─────▶│  lenet_predict_     │  │
+│  │  ARM Cortex-A9   │────▶│  lenet_predict_     │ │
 │  │  @ 650 MHz       │      │  fixed HLS IP       │  │
 │  │                  │      │                     │  │
-│  │  Jupyter /       │◀─────│  ap_fixed<16,8>     │  │
+│  │  Jupyter /       │◀────│  ap_fixed<16,8>     │  │
 │  │  Python host     │      │  26,892 LUTs        │  │
 │  │                  │      │  29 DSPs            │  │
 │  │  DDR Memory ─────┼──────▶  7.279 ns clock    │  │
 │  └──────────────────┘      └─────────────────────┘  │
-│                                                      │
+│                                                     │
 │  M_AXI_GP0  →  AXI Interconnect  →  s_axi_control   │
 │  S_AXI_HP0  ←  AXI Interconnect  ←  m_axi_gmem      │
 └─────────────────────────────────────────────────────┘
